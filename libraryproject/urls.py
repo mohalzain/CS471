@@ -17,7 +17,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+import apps.usermodule.views
+import apps.bookmodule.views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('user/',apps.usermodule.views.handler),
+    path('book/',apps.bookmodule.views.handler),
+    path('book/<val>/',apps.bookmodule.views.handler2),
+    path('inj/',apps.bookmodule.views.handler3),
+    path('index/<un>',apps.bookmodule.views.getIndex),
+
 ]
