@@ -1,18 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import os
 # Create your views here.
+path = os.getcwd()
+links = {"l1":"index.html","l2":'list_books.html',"l3":'aboutus.html'}
+def indexHandler(request):
+    print(path)
+    return render(request, f'index.html')
+
+def list_booksHandlers(request):
+    return render(request, f'list_books.html')
 
 
-def handler(request):
-    return HttpResponse(f'Name: {request.GET.get('name')} <br></br> Age: {request.GET.get('age')}')
+def oneBookHandler(request):
+    return render(request, f'one_book.html')
 
-def handler2(request,val):
-    packet = {'booknum':val}
-    return render(request,'../templates/bookmodule/index.html',packet)
-
-def getIndex(request,un):
-    print(un)
-    return render(request,'../templates/bookmodule/index.html',{"name":un})
-
-def handler3(request):
-    return HttpResponse('<script> document.querySelector("window").style.backgroundColor = "black" </script>')
+def aboutUsHandler(request):
+    return render(request, f'aboutus.html')
