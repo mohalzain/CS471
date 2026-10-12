@@ -17,3 +17,10 @@ def oneBookHandler(request):
 
 def aboutUsHandler(request):
     return render(request, f'aboutus.html')
+
+
+def booksHtml(request):
+    return render(request, 'links.html')
+
+def booksFormat(request):
+    return render(request,f'format.html')

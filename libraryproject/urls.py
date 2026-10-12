@@ -26,5 +26,7 @@ urlpatterns = [
     path('book/',apps.bookmodule.views.oneBookHandler,name='book'),
     path('aboutus/',apps.bookmodule.views.aboutUsHandler,name='aboutus'),
     path('list_books/',apps.bookmodule.views.list_booksHandlers,name='list_books'),
-    path('',apps.bookmodule.views.indexHandler,name='index')
+    path('',apps.bookmodule.views.indexHandler,name='index'),
+    path('books/html5/links', apps.bookmodule.views.booksHtml),
+    path('books/html5/formatting', apps.bookmodule.views.booksFormat)
 ]

@@ -117,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = f'{Path.home()}/Desktop/CS471_TEMPLATES/'
 STATICFILES_DIRS = [f'{Path.home()}/Desktop/CS471_TEMPLATES/']
 
 # Email
